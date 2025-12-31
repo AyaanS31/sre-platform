@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jasmine-Altaf PC\\Documents\\AzureSRE\\ConfigService\\ConfigService.Api\\ConfigService.Api.csproj": {}
+    "C:\\Users\\Jasmine-Altaf PC\\Documents\\GitHub\\sre-platform\\ConfigService.Api\\ConfigService.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jasmine-Altaf PC\\Documents\\AzureSRE\\ConfigService\\ConfigService.Api\\ConfigService.Api.csproj": {
+    "C:\\Users\\Jasmine-Altaf PC\\Documents\\GitHub\\sre-platform\\ConfigService.Api\\ConfigService.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jasmine-Altaf PC\\Documents\\AzureSRE\\ConfigService\\ConfigService.Api\\ConfigService.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Jasmine-Altaf PC\\Documents\\GitHub\\sre-platform\\ConfigService.Api\\ConfigService.Api.csproj",
         "projectName": "ConfigService.Api",
-        "projectPath": "C:\\Users\\Jasmine-Altaf PC\\Documents\\AzureSRE\\ConfigService\\ConfigService.Api\\ConfigService.Api.csproj",
+        "projectPath": "C:\\Users\\Jasmine-Altaf PC\\Documents\\GitHub\\sre-platform\\ConfigService.Api\\ConfigService.Api.csproj",
         "packagesPath": "C:\\Users\\Jasmine-Altaf PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jasmine-Altaf PC\\Documents\\AzureSRE\\ConfigService\\ConfigService.Api\\obj\\",
+        "outputPath": "C:\\Users\\Jasmine-Altaf PC\\Documents\\GitHub\\sre-platform\\ConfigService.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -20,14 +20,14 @@
           "C:\\Users\\Jasmine-Altaf PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -44,8 +44,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",

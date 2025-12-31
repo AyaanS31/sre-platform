@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2ZUTiz8aXzs=",
+  "dgSpecHash": "tWo9MtNi+X8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jasmine-Altaf PC\\Documents\\AzureSRE\\ConfigService\\ConfigService.Api\\ConfigService.Api.csproj",
+  "projectFilePath": "C:\\Users\\Jasmine-Altaf PC\\Documents\\GitHub\\sre-platform\\ConfigService.Api\\ConfigService.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jasmine-Altaf PC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\10.0.1\\microsoft.bcl.asyncinterfaces.10.0.1.nupkg.sha512",
     "C:\\Users\\Jasmine-Altaf PC\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
