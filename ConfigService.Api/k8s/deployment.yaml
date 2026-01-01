@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: configservice
-        image: srelabacr123.azurecr.io/configservice:v1
+        image: srelabacr123.azurecr.io/configservice:resilient
         ports:
         - containerPort: 8080
         env:

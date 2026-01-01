@@ -1,0 +1,10 @@
+az login
+az acr login --name srelabacr123
+
+Package latest build as docker image and publish to ACR_NAME
+//docker build -t configservice:resilient .
+//docker tag configservice:resilient srelabacr123.azurecr.io/configservice:resilient
+//docker push <ACR_NAME>.azurecr.io/configservice:resilient
+
+kubectl apply -f k8s/deployment.yaml
+kubectl get pods
