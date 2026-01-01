@@ -649,6 +649,46 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Http/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http.Polly/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "7.0.0",
+          "Polly": "7.2.3",
+          "Polly.Extensions.Http": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -826,32 +866,32 @@
           }
         }
       },
-      "Polly/8.6.5": {
+      "Polly/7.2.3": {
         "type": "package",
-        "dependencies": {
-          "Polly.Core": "8.6.5"
-        },
         "compile": {
-          "lib/net6.0/Polly.dll": {
+          "lib/netstandard2.0/Polly.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Polly.dll": {
+          "lib/netstandard2.0/Polly.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Polly.Core/8.6.5": {
+      "Polly.Extensions.Http/3.0.0": {
         "type": "package",
+        "dependencies": {
+          "Polly": "7.1.0"
+        },
         "compile": {
-          "lib/net8.0/Polly.Core.dll": {
-            "related": ".pdb;.xml"
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Polly.Core.dll": {
-            "related": ".pdb;.xml"
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2479,6 +2519,48 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Http/7.0.0": {
+      "sha512": "9Pq9f/CvOSz0t9yQa6g1uWpxa2sm13daLFm8EZwy9MaQUjKXWdNUXQwIxwhmba5N83UIqURiPHSNqGK1vfWF2w==",
+      "type": "package",
+      "path": "microsoft.extensions.http/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Http.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Http.targets",
+        "lib/net462/Microsoft.Extensions.Http.dll",
+        "lib/net462/Microsoft.Extensions.Http.xml",
+        "lib/net6.0/Microsoft.Extensions.Http.dll",
+        "lib/net6.0/Microsoft.Extensions.Http.xml",
+        "lib/net7.0/Microsoft.Extensions.Http.dll",
+        "lib/net7.0/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.7.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Http.Polly/7.0.0": {
+      "sha512": "HG4hRqde2/3rr34FluxLflD9j197XrI5iV63jyu4O5/Bl4FJlO05bszKTxOYAmX02cGweAiLc4EiLUjZ0CuOKw==",
+      "type": "package",
+      "path": "microsoft.extensions.http.polly/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.xml",
+        "microsoft.extensions.http.polly.7.0.0.nupkg.sha512",
+        "microsoft.extensions.http.polly.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Logging/10.0.0": {
       "sha512": "BStFkd5CcnEtarlcgYDBcFzGYCuuNMzPs02wN3WBsOFoYIEmYoUdAiU+au6opzoqfTYJsMTW00AeqDdnXH2CvA==",
       "type": "package",
@@ -2771,59 +2853,43 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Polly/8.6.5": {
-      "sha512": "VqtW2ZE/ALvQMAH1cQY3qZ2cF2OXa3oe/HKMdOv6Q02HCoEW0rsFNfcBONXlHBe1TnjWW1vdRxBEkPeq0/2FHA==",
+    "Polly/7.2.3": {
+      "sha512": "DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
       "type": "package",
-      "path": "polly/8.6.5",
+      "path": "polly/7.2.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE",
-        "lib/net462/Polly.dll",
-        "lib/net462/Polly.pdb",
-        "lib/net462/Polly.xml",
+        "Polly.png",
+        "lib/net461/Polly.dll",
+        "lib/net461/Polly.pdb",
+        "lib/net461/Polly.xml",
         "lib/net472/Polly.dll",
         "lib/net472/Polly.pdb",
         "lib/net472/Polly.xml",
-        "lib/net6.0/Polly.dll",
-        "lib/net6.0/Polly.pdb",
-        "lib/net6.0/Polly.xml",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
         "lib/netstandard2.0/Polly.dll",
         "lib/netstandard2.0/Polly.pdb",
         "lib/netstandard2.0/Polly.xml",
-        "package-icon.png",
-        "package-readme.md",
-        "polly.8.6.5.nupkg.sha512",
+        "polly.7.2.3.nupkg.sha512",
         "polly.nuspec"
       ]
     },
-    "Polly.Core/8.6.5": {
-      "sha512": "t+sUVrIwvo7UmsgHGgOG9F0GDZSRIm47u2ylH17Gvcv1q5hNEwgD5GoBlFyc0kh/pebmPyrAgvGsR/65ZBaXlg==",
+    "Polly.Extensions.Http/3.0.0": {
+      "sha512": "drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
       "type": "package",
-      "path": "polly.core/8.6.5",
+      "path": "polly.extensions.http/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE",
-        "lib/net462/Polly.Core.dll",
-        "lib/net462/Polly.Core.pdb",
-        "lib/net462/Polly.Core.xml",
-        "lib/net472/Polly.Core.dll",
-        "lib/net472/Polly.Core.pdb",
-        "lib/net472/Polly.Core.xml",
-        "lib/net6.0/Polly.Core.dll",
-        "lib/net6.0/Polly.Core.pdb",
-        "lib/net6.0/Polly.Core.xml",
-        "lib/net8.0/Polly.Core.dll",
-        "lib/net8.0/Polly.Core.pdb",
-        "lib/net8.0/Polly.Core.xml",
-        "lib/netstandard2.0/Polly.Core.dll",
-        "lib/netstandard2.0/Polly.Core.pdb",
-        "lib/netstandard2.0/Polly.Core.xml",
-        "package-icon.png",
-        "package-readme.md",
-        "polly.core.8.6.5.nupkg.sha512",
-        "polly.core.nuspec"
+        "lib/netstandard1.1/Polly.Extensions.Http.dll",
+        "lib/netstandard1.1/Polly.Extensions.Http.xml",
+        "lib/netstandard2.0/Polly.Extensions.Http.dll",
+        "lib/netstandard2.0/Polly.Extensions.Http.xml",
+        "polly.extensions.http.3.0.0.nupkg.sha512",
+        "polly.extensions.http.nuspec"
       ]
     },
     "Serilog/4.3.0": {
@@ -4593,8 +4659,10 @@
     "net8.0": [
       "Microsoft.ApplicationInsights.AspNetCore >= 2.23.0",
       "Microsoft.Extensions.Diagnostics.HealthChecks >= 10.0.1",
+      "Microsoft.Extensions.Http.Polly >= 7.0.0",
       "Microsoft.OpenApi >= 1.6.0",
-      "Polly >= 8.6.5",
+      "Polly >= 7.2.3",
+      "Polly.Extensions.Http >= 3.0.0",
       "Serilog.AspNetCore >= 10.0.0",
       "Serilog.Sinks.Console >= 6.1.1",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -4655,13 +4723,21 @@
             "target": "Package",
             "version": "[10.0.1, )"
           },
+          "Microsoft.Extensions.Http.Polly": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "Microsoft.OpenApi": {
             "target": "Package",
             "version": "[1.6.0, )"
           },
           "Polly": {
             "target": "Package",
-            "version": "[8.6.5, )"
+            "version": "[7.2.3, )"
+          },
+          "Polly.Extensions.Http": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",

@@ -10,8 +10,10 @@
         "dependencies": {
           "Microsoft.ApplicationInsights.AspNetCore": "2.23.0",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "10.0.1",
+          "Microsoft.Extensions.Http.Polly": "7.0.0",
           "Microsoft.OpenApi": "1.6.0",
-          "Polly": "8.6.5",
+          "Polly": "7.2.3",
+          "Polly.Extensions.Http": "3.0.0",
           "Serilog.AspNetCore": "10.0.0",
           "Serilog.Sinks.Console": "6.1.1",
           "Swashbuckle.AspNetCore": "6.5.0"
@@ -357,6 +359,27 @@
           }
         }
       },
+      "Microsoft.Extensions.Http/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.1",
+          "Microsoft.Extensions.Logging": "10.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.1",
+          "Microsoft.Extensions.Options": "10.0.1"
+        }
+      },
+      "Microsoft.Extensions.Http.Polly/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Http": "7.0.0",
+          "Polly": "7.2.3",
+          "Polly.Extensions.Http": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.Polly.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51819"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/10.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
@@ -447,22 +470,22 @@
           }
         }
       },
-      "Polly/8.6.5": {
-        "dependencies": {
-          "Polly.Core": "8.6.5"
-        },
+      "Polly/7.2.3": {
         "runtime": {
-          "lib/net6.0/Polly.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.6.5.5194"
+          "lib/netstandard2.0/Polly.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.3.0"
           }
         }
       },
-      "Polly.Core/8.6.5": {
+      "Polly.Extensions.Http/3.0.0": {
+        "dependencies": {
+          "Polly": "7.2.3"
+        },
         "runtime": {
-          "lib/net8.0/Polly.Core.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.6.5.5194"
+          "lib/netstandard2.0/Polly.Extensions.Http.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
@@ -1120,6 +1143,20 @@
       "path": "microsoft.extensions.hosting.abstractions/10.0.1",
       "hashPath": "microsoft.extensions.hosting.abstractions.10.0.1.nupkg.sha512"
     },
+    "Microsoft.Extensions.Http/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9Pq9f/CvOSz0t9yQa6g1uWpxa2sm13daLFm8EZwy9MaQUjKXWdNUXQwIxwhmba5N83UIqURiPHSNqGK1vfWF2w==",
+      "path": "microsoft.extensions.http/7.0.0",
+      "hashPath": "microsoft.extensions.http.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http.Polly/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HG4hRqde2/3rr34FluxLflD9j197XrI5iV63jyu4O5/Bl4FJlO05bszKTxOYAmX02cGweAiLc4EiLUjZ0CuOKw==",
+      "path": "microsoft.extensions.http.polly/7.0.0",
+      "hashPath": "microsoft.extensions.http.polly.7.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Logging/10.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1197,19 +1234,19 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
-    "Polly/8.6.5": {
+    "Polly/7.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VqtW2ZE/ALvQMAH1cQY3qZ2cF2OXa3oe/HKMdOv6Q02HCoEW0rsFNfcBONXlHBe1TnjWW1vdRxBEkPeq0/2FHA==",
-      "path": "polly/8.6.5",
-      "hashPath": "polly.8.6.5.nupkg.sha512"
+      "sha512": "sha512-DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
+      "path": "polly/7.2.3",
+      "hashPath": "polly.7.2.3.nupkg.sha512"
     },
-    "Polly.Core/8.6.5": {
+    "Polly.Extensions.Http/3.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-t+sUVrIwvo7UmsgHGgOG9F0GDZSRIm47u2ylH17Gvcv1q5hNEwgD5GoBlFyc0kh/pebmPyrAgvGsR/65ZBaXlg==",
-      "path": "polly.core/8.6.5",
-      "hashPath": "polly.core.8.6.5.nupkg.sha512"
+      "sha512": "sha512-drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
+      "path": "polly.extensions.http/3.0.0",
+      "hashPath": "polly.extensions.http.3.0.0.nupkg.sha512"
     },
     "Serilog/4.3.0": {
       "type": "package",

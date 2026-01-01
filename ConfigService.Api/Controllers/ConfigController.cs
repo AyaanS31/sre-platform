@@ -8,10 +8,11 @@ namespace ConfigService.Api.Controllers;
 public class ConfigController : ControllerBase
 {
     private readonly IDictionary<string, string> _store;
-
-    public ConfigController(IDictionary<string, string> store)
+    private readonly IAuditService _auditService;
+    public ConfigController(IDictionary<string, string> store, IAuditService auditService)
     {
         _store = store;
+        _auditService = auditService;
     }
 
     [HttpGet("{key}")]
@@ -29,8 +30,27 @@ public class ConfigController : ControllerBase
         foreach (var item in data)
         {
             _store[item.Key] = item.Value;
+            _auditService.RecordConfigChangeAsync("ConfigService", item.Key, item.Value);
         }
 
         return Ok(new { message = "Config updated", data });
     }
+
+    [HttpGet("chaos")]
+    public IActionResult Chaos([FromQuery] string type = "latency")
+    {
+        if (type == "latency")
+        {
+            Thread.Sleep(8000); // 8 seconds - triggers timeout
+            return Ok(new { message = "Slow response" });
+        }
+
+        if (type == "exception")
+        {
+            throw new Exception("Simulated failure");
+        }
+
+        return Ok(new { message = "No chaos triggered" });
+    }
+
 }
