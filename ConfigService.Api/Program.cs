@@ -9,15 +9,14 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+// Add Application Insights
+builder.Services.AddApplicationInsightsTelemetry();
+
 // Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-// Add health checks
 builder.Services.AddHealthChecks();
-
-// Add in-memory config store
 builder.Services.AddSingleton<IDictionary<string, string>>(new Dictionary<string, string>());
 
 var app = builder.Build();
